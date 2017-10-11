@@ -59,11 +59,10 @@ var arrayTasks = {
 			if(number % 2 === 0) filteredNumbers.push(number)
 		}
 		arr.filter(numberFilter);
-
-		return filteredNumbers.reduce(function(runningTotal, currentNumber){
-        return runningTotal + (currentNumber * currentNumber);
-    }, 0);
-		// return total;
+		var square = function (runningTotal, currentNumber) {
+			return runningTotal + (currentNumber * currentNumber);
+		}
+	return filteredNumbers.reduce(square, 0);
 	}
 
 }
