@@ -27,12 +27,10 @@ var arrayTasks = {
 
 	findDuplicates: function (arr) {
 		var duplicates = [];
-		var filterDuplicates = function (a, b) {
+		var sortDuplicates = function (a, b) {
 			if (a === b && !duplicates.includes(a)) duplicates.push(a);
 		}
-		arr.sort(filterDuplicates);
-
-		// duplicates.pop();
+		arr.sort(sortDuplicates);
 		return duplicates;
 	},
 
