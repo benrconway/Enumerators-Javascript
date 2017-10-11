@@ -54,7 +54,16 @@ var arrayTasks = {
 	},
 
 	sumOfAllEvenNumbersSquared: function (arr) {
+		var filteredNumbers = [];
+		var numberFilter = function (number) {
+			if(number % 2 === 0) filteredNumbers.push(number)
+		}
+		arr.filter(numberFilter);
 
+		return filteredNumbers.reduce(function(runningTotal, currentNumber){
+        return runningTotal + (currentNumber * currentNumber);
+    }, 0);
+		// return total;
 	}
 
 }
