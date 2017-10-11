@@ -34,17 +34,28 @@ var arrayTasks = {
 		return duplicates;
 	},
 
-	// removeAndClone: function (arr, valueToRemove) {
+	removeAndClone: function (arr, valueToRemove) {
+		var newArray = [];
+		var filterForRemoval = function(value){
+			if(value !== valueToRemove) newArray.push(value);
+		}
+		arr.filter(filterForRemoval);
+		return newArray;
+	},
 
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		var newArray = [];
+		var index = arr.indexOf(itemToFind);
+		while (index != -1) {
+			newArray.push(index);
+			index = arr.indexOf(itemToFind, index + 1);
+		}
+		return newArray;
+	},
 
-	// findIndexesOf: function (arr, itemToFind) {
+	sumOfAllEvenNumbersSquared: function (arr) {
 
-	// },
-
-	// sumOfAllEvenNumbersSquared: function (arr) {
-
-	// }
+	}
 
 }
 
